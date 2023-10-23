@@ -1,0 +1,25 @@
+{
+    "name": "HelpMeOut",
+    "description": "Records screen and audio activity and returns recorder videos and audios with transcript",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "icons": {
+        "16": "iCON.png",
+        "32": "iCON.png",
+        "128": "iCON.png"
+      },
+    "action": {
+        "default_title": "HelpMeOut",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "scripting",
+        "tabs",
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+      },    
+    "options_page": "options.html"
+  
+}

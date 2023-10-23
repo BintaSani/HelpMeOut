@@ -1,0 +1,1 @@
+{"version":3,"file":"background.js","mappings":";;;;;AAAA;AACA;AACA","sources":["webpack://chrome-extension/./src/background/background.js"],"sourcesContent":["chrome.runtime.onInstalled.addListener(() => {\r\n    console.log('i just installed my chrome extensions');\r\n})"],"names":[],"sourceRoot":""}
