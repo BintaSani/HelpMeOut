@@ -1,0 +1,150 @@
+
+@mixin devices($breakpoint) { //the name of the mixin is devices
+  
+    @if $breakpoint == tiny {    
+    @media  (min-width: 320px) and (orientation: portrait){
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == phone {
+    @media (min-width: 360px) and (orientation: portrait){
+      @content;
+      
+    }
+  }
+  
+    @if $breakpoint == phlet {    
+    @media (min-width: 480px) and (orientation: landscape) {
+      @content;
+    }
+  }
+    @if $breakpoint == surface {    
+    @media (min-width: 540px) and (orientation: portrait){
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == thone {
+    @media (min-width: 600px) and (orientation: landscape){
+      @content;
+    }
+  }
+    @if $breakpoint == tablet {    
+    @media (min-width: 768px) and (orientation: portrait){
+      @content;
+    }
+  }
+  @if $breakpoint == view {
+    @media (min-width: 800px) and (orientation: landscape){
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1000px) {
+      @content;
+    }
+  }
+    @if $breakpoint == bigDesktop {    
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == giant {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+  @if $breakpoint == 4k {
+    @media (min-width: 1840px) {
+      @content;
+    }
+  }
+}
+
+.controls{
+    background-color: #08051E;
+    width: 12%;
+    height: 31vh;
+    border-radius: 8px;
+    position: absolute;
+    right: 6%;
+    z-index: 2;
+    bottom: 10vh;
+    
+    @include devices(desktop){
+        width: 16%;
+        display: flex;
+        height: 6vh;
+        border-radius: 35px;
+        justify-content: space-between;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    .time{
+        display: none;
+        @include devices(desktop){
+            display: block;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: #ffffff;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    }
+    .icon{
+        margin-left: auto;
+        margin-right: auto;
+        width: 69%;
+        @include devices(desktop){
+            
+            width: 13%;
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+    
+        }
+        .bee{
+        @include devices(desktop){
+            width: 35px;
+            height: 35px;
+    
+        }}
+    }
+    .icn{
+        margin-bottom: 0.5vh;
+        @include devices(desktop){
+            margin-bottom: auto;
+    
+        }
+    }
+    .icnz{
+        @include devices(desktop){
+            height: 4vh;
+    
+        }
+    }
+
+    .icnx{
+        display: none;
+        @include devices(desktop){
+            display: block;
+    
+        }
+    }
+    .icn1{
+        padding-top: 3vh;
+        @include devices(desktop){
+            padding-top: 0;
+    
+        }
+    }
+    .icn2{
+        @include devices(desktop){
+            display: none;
+        }
+    }
+}

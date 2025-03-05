@@ -1,11 +1,1 @@
-/******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
-/*!**************************************!*\
-  !*** ./src/background/background.js ***!
-  \**************************************/
-chrome.runtime.onInstalled.addListener(function () {
-  console.log('i just installed my chrome extensions');
-});
-/******/ })()
-;
-//# sourceMappingURL=background.js.map
+(()=>{"use strict";var e,r={207:(e,r,o)=>{var n=o(866);o(900),chrome.runtime.onInstalled.addListener((function(){console.log("Chrome extension installed")})),n.Z.apps.length||n.Z.initializeApp({apiKey:"AIzaSyASUJlnUutu5AN9CXXcxyAC1cwX7P_Ez54",authDomain:"chrome-ext-40d06.firebaseapp.com",projectId:"chrome-ext-40d06"}),chrome.runtime.onMessage.addListener((function(e,r,o){if(console.log("Message received in background script:",e),"AUTH_WITH_TOKEN"===e.type){var t=e.token;return console.log("Processing token:",t),t?(n.Z.auth().signInWithCustomToken(t).then((function(){var e=n.Z.auth().currentUser;console.log("User signed in:",null==e?void 0:e.uid),o({success:!0,userId:null==e?void 0:e.uid})})).catch((function(e){console.error("Sign-in error:",e),o({success:!1,error:e.message})})),!0):(console.error("No token received"),void o({success:!1,error:"Token missing"}))}}))}},o={};function n(e){var t=o[e];if(void 0!==t)return t.exports;var i=o[e]={exports:{}};return r[e](i,i.exports,n),i.exports}n.m=r,e=[],n.O=(r,o,t,i)=>{if(!o){var s=1/0;for(u=0;u<e.length;u++){for(var[o,t,i]=e[u],c=!0,a=0;a<o.length;a++)(!1&i||s>=i)&&Object.keys(n.O).every((e=>n.O[e](o[a])))?o.splice(a--,1):(c=!1,i<s&&(s=i));if(c){e.splice(u--,1);var l=t();void 0!==l&&(r=l)}}return r}i=i||0;for(var u=e.length;u>0&&e[u-1][2]>i;u--)e[u]=e[u-1];e[u]=[o,t,i]},n.d=(e,r)=>{for(var o in r)n.o(r,o)&&!n.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:r[o]})},n.o=(e,r)=>Object.prototype.hasOwnProperty.call(e,r),n.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},(()=>{var e={352:0};n.O.j=r=>0===e[r];var r=(r,o)=>{var t,i,[s,c,a]=o,l=0;if(s.some((r=>0!==e[r]))){for(t in c)n.o(c,t)&&(n.m[t]=c[t]);if(a)var u=a(n)}for(r&&r(o);l<s.length;l++)i=s[l],n.o(e,i)&&e[i]&&e[i][0](),e[i]=0;return n.O(u)},o=self.webpackChunkchrome_extension=self.webpackChunkchrome_extension||[];o.forEach(r.bind(null,0)),o.push=r.bind(null,o.push.bind(o))})();var t=n.O(void 0,[986],(()=>n(207)));t=n.O(t)})();

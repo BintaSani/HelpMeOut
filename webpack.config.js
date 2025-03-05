@@ -9,7 +9,8 @@ module.exports = {
     entry: {
         popup: path.resolve("./src/popup/popup.jsx"),
         options: path.resolve("./src/options/options.jsx"),
-        background: path.resolve("./src/background/background.js")
+        background: path.resolve("./src/background/background.js"),
+        contentScript: path.resolve("./src/content/contentScript.js")
     },
     devtool: "cheap-module-source-map",
     module: {
