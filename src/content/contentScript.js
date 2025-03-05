@@ -1,4 +1,4 @@
-const trustedOrigins = ['http://localhost:3000', 'https://help-me-out-ext.netlify.app/', 'https://chrome-ext-40d06.firebaseapp.com', `chrome-extension://${chrome.runtime.id}`, 'https://firebase.google.com', 'https://helpmeout-be.vercel.app/' ];
+const trustedOrigins = ['http://localhost:3000', 'https://help-me-out-ext.netlify.app/', 'https://chrome-ext-40d06.firebaseapp.com', 'https://firebase.google.com', 'https://helpmeout-be.vercel.app/', `chrome-extension://${chrome.runtime.id}`];
 const requestUIDAndToken = () => {
   window.postMessage({ type: 'REQUEST_UID_AND_TOKEN' }, trustedOrigins);
   console.log('uid and token');
